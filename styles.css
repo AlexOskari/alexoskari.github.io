@@ -1,38 +1,145 @@
-
-body {
-    background-color: black; 
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
     font-family: "Helvetica LT W01 Light", sans-serif;
-    font-weight: normal;
-    line-height: 1.4;
-    font-size: 16px;
+    list-style: none;
 }
 
-.panel {
-    width: 50%;
-    height: 1600px;
-    min-width: 400px;
-    background-color: #18184e;
-    margin-left: 25%;
-    margin-right: 25%;
-    text-align: center;
-    border-radius: 6px;
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 35px 12%;
+    background: black;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-hr {
-    width: 80%;
-    height: 2px;
+.logo{
+    color:white;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color:rgb(0, 122, 255);
+    text-shadow: 0 0 25px rgb(0, 122, 255),
+                 0 0 25px rgb(0, 122, 255);
+}
+
+.navbar a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active{
+    color: rgb(0, 122, 255);
+    border-bottom: 3px solid rgb(0, 122, 255);    
+}
+
+.contact{
+    padding: 10px 28px;
     background-color: white;
-    border-width: 0;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-#header-mobile {
-    
+.contact:hover {
+    color: white;
+    background-color: rgb(0, 122, 255);
+    box-shadow: 0 0 25px rgb(0, 122, 255);
 }
 
-#menu-mobile {
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
 
+.home-content{
+    max-width: 800px;
+}
+
+.home-content h1{
+    font-size: 25px;
+    padding: 0 0 15%;
+    color: rgb(82, 82, 82);
+}
+
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+
+.btn-1{
+    padding: 15px 28px;
+    background-color: white;
+    color:rgb(0, 122, 255);
+    border: 2px solid rgb(0, 122, 255);
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-1:hover{
+    box-shadow: 0 0 25px rgb(0, 122, 255);
+}
+
+.btn-2{
+    padding: 15px 28px;
+    background-color: rgb(0, 122, 255);
+    color:white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-2:hover{
+    box-shadow: 0 0 25px rgb(0, 122, 255);
+}
+
+.img-box img{
+    border-radius: 30%;
+    width: 350px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+
+::-webkit-scrollbar-track{
+    background-color: black;
+    width: 50px;
 }
