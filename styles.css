@@ -275,15 +275,40 @@
 }
 
 @media screen and (max-width: 600px) {
+    .logo{
+        font-size: 15px;
+    }
+
+    .navbar a{
+        font-size: 9px;
+        margin: 0 3px;
+    }
+
+    .contact{
+        padding: 10px 10px;
+        background-color: var(--third-color);
+        font-size: 10px;
+        letter-spacing: .5px;
+    }
+
     .about-img img{
         position: relative;
-        width: 300px;
+        width: 100px;
         border-radius: 50%;
     }
 
+    .about{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12% 8%;
+        gap: 0em;
+        background: var(--secondary-color);
+    }
+
     .img-box img{
-        border-radius: 50%;
-        width: 250px;
+        width: 150px;
+        translate: -50px
     }
 
     .home-content h1{
