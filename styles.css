@@ -44,18 +44,33 @@ html{
                  0 0 25px var(--main-color);
 }
 
-.navbar a{
+.navbar a, .footer ul li a{
+    position: relative;
     color: var(--third-color);
     font-size: 18px;
     font-weight: 500;
     margin: 0 20px;
-    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+    padding: 0 5px;
+}
+
+.footer ul li a{
+    margin: 0 0;
+}
+
+.navbar a:after, .footer ul li a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 3px;
+    width: 0%;
+    left:0;
+    bottom:-10px;
     transition: 0.3s ease;
 }
 
-.navbar a:hover, .navbar a.active{
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);    
+.navbar a:hover:after, .footer ul li a:hover:after{
+    width:100%;
 }
 
 .contact{
@@ -280,16 +295,6 @@ html{
     line-height: 1.6;
     margin-bottom: 0;
     text-align: center;
-}
-
-.footer ul li a{
-    color: var(--third-color);
-    border-bottom: 3px solid transparent;
-    transition: 0.3s ease;
-}
-
-.footer ul li a:hover{
-    border-bottom: 3px solid var(--main-color);
 }
 
 .footer ul li{
