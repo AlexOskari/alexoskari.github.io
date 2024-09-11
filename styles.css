@@ -202,11 +202,16 @@ html{
     margin: 2em 0 3em;
 }
 
-.contact-form h2{
+.contact-form h2, .contact-form p{
     text-align: center;
-    margin-top: 3em;
+    margin-top: 1em;
     margin-bottom: 1em;
     font-size: 36px;
+}
+
+.contact-form p{
+    font-size: 20px;
+    margin-top: 6em;
 }
 
 .contact-form form{
