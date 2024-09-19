@@ -194,6 +194,25 @@ html{
     background: var(--secondary-color);
 }
 
+.portfolio{
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;  
+    background: var(--secondary-color);
+}
+
+.portfolio img{
+    width: 25vw;
+}
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+}
+
 .about-img img{
     position: relative;
     width: 550px;
@@ -215,6 +234,10 @@ html{
     color: var(--third-color);
     font-size: 20px;
     margin: 2em 0 3em;
+}
+
+.portfolio-content{
+    width: 20px;
 }
 
 .contact-form h2, .contact-form p{
@@ -364,5 +387,16 @@ html{
         font-size: 10px;
         letter-spacing: 1px;
         font-weight: 400;
+    }
+
+    .portfolio img{
+        width: 80vw;
+    }
+
+    .portfolio-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        gap: 10px;
     }
 }
