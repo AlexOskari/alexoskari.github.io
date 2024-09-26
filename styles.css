@@ -451,13 +451,7 @@ html{
     }
 
     .portfolio img{
-        width: 80vw;
+        width: 10vw;
     }
 
-    .portfolio-content{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, auto);
-        gap: 10px;
-    }
 }
