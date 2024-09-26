@@ -90,7 +90,7 @@ html{
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.home{
+.home, .portfolio-home{
     width: 100%;
     min-height: 100vh;
     background: var(--third-color);
@@ -98,6 +98,10 @@ html{
     align-items: center;
     gap: 7em;
     padding: 30px 12% 0;
+}
+
+.portfolio-home{
+    min-height: 70vh;
 }
 
 .home-content{
@@ -128,6 +132,18 @@ html{
 
 @keyframes typing {
     from { width: 0}
+}
+
+.portfolio-home-content h1{
+    padding-bottom: 5px;
+    color: var(--secondary-color);
+    border-right: 3px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 1.5s steps(12),
+        cursor .4s step-end infinite alternate;
 }
 
 .btn-box{
@@ -195,22 +211,57 @@ html{
 }
 
 .portfolio{
-    justify-content: center;
-    align-items: center;
-    padding: 12% 8%;
-    gap: 10em;  
+    width: 100%;
+    background: var(--third-color);
+    padding: 100px 12% 100px;
     background: var(--secondary-color);
+    text-align: center;
 }
+
+/* Title styling */
+.portfolio h1:first-of-type {
+    font-size: 34px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+  }
 
 .portfolio img{
-    width: 25vw;
+    width: 15vw;
+    border-radius: 20%;
+    margin-top: 20px;
 }
 
-.portfolio-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
+/* List of features */
+.portfolio-content {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* Game Engine and State */
+.portfolio h1:nth-last-of-type(2),
+.portfolio h1:last-of-type {
+  font-size: 16px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* GIF Container */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+.gif-container img {
+    width: 20vw; /* Adjust the width of the GIFs */
+    object-fit: cover;
+    margin: 0 10px; /* Adds space between the GIFs */
+    border-radius: 8px; /* Optional: adds rounded corners to the GIFs */
+  }
+
+.portfolio h1{
+    color: gray;
 }
 
 .about-img img{
