@@ -96,7 +96,7 @@ html{
     background: var(--third-color);
     display: flex;
     align-items: center;
-    gap: 7em;
+    gap: 15em;
     padding: 30px 12% 0;
 }
 
@@ -185,7 +185,7 @@ html{
 
 .img-box img{
     border-radius: 50%;
-    width: 200px;
+    width: 20vw;
 }
 
 ::-webkit-scrollbar{
@@ -397,6 +397,10 @@ html{
         margin: 0 3px;
     }
 
+    .home {
+        gap: 0;
+    }
+
     .contact{
         padding: 10px 10px;
         background-color: var(--third-color);
@@ -420,8 +424,7 @@ html{
     }
 
     .img-box img{
-        width: 150px;
-        translate: -50px
+        width: 30vw;
     }
 
     .home-content h1{
@@ -450,8 +453,42 @@ html{
         font-weight: 400;
     }
 
-    .portfolio img{
-        width: 10vw;
+    .portfolio-content {
+        flex-grow: 1;
+        margin-right: 0;
+        width: 100%; /* Ensures full width */
+        max-width: 90vw; /* Prevents it from becoming too wide */
+        text-align: left;
     }
 
+    .portfolio-content h2 {
+        font-size: 16px;
+        line-height: 1.5; /* Makes text easier to read */
+    }
+
+    .portfolio img {
+        width: 50vw;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; /* Centers image */
+    }
+
+    .gif-container {
+        flex-direction: column;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio {
+        padding: 20px 5%; /* Adjusts padding for mobile */
+    }
+
+    .gif-container img {
+        width: 90vw; /* Adjusts GIF width to fill most of the screen */
+        margin-bottom: 10px;
+    }
 }
