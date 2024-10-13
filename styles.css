@@ -188,6 +188,10 @@ html{
     width: 20vw;
 }
 
+.job-icon img{
+    width: 10vw;
+}
+
 ::-webkit-scrollbar{
     width: 15px;
 }
@@ -265,14 +269,45 @@ html{
     display: flex;
     justify-content: center;
     margin-top: 20px;
-  }
+}
 
 .gif-container img {
     width: 20vw; /* Adjust the width of the GIFs */
     object-fit: cover;
     margin: 0 10px; /* Adds space between the GIFs */
     border-radius: 8px; /* Optional: adds rounded corners to the GIFs */
-  }
+}
+
+/* Portfolio content */
+.portfolio-content {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.experience {
+    text-align: center;
+    padding: 100px 12% 100px;
+}
+
+.experience h1{
+    font-size: 36px;
+    padding-bottom: 50px;
+}
+
+.experience-content h2 {
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin: 5px 0;
+    padding-left: 50px;
+    word-wrap: break-word; /* Ensures long text will break into the next line */
+    text-align: left; /* Aligns the text to the left */
+}
+
+.experience-content span{
+    color: gray;
+    font-size: 20px;
+}
 
 .about-img img{
     position: relative;
@@ -423,6 +458,16 @@ html{
 
     .img-box img{
         width: 30vw;
+    }
+
+    .job-icon img{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 20vw;
+    }
+
+    .experience-content h2 {
+        font-size: 20px;
     }
 
     .home-content h1{
