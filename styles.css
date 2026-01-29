@@ -32,10 +32,18 @@ html{
 }
 
 .logo{
+    display: inline-flex;
     color: var(--third-color);
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 600;
     transition: 0.3s ease;
+    gap: 0.6em;
+    align-items: center;
+}
+
+.logo img {
+    height: 2em;
+    width: auto;
 }
 
 .logo:hover{
@@ -92,7 +100,7 @@ html{
 
 .home, .portfolio-home{
     width: 100%;
-    min-height: 100vh;
+    height: 90vh;
     background: var(--third-color);
     display: flex;
     align-items: center;
@@ -101,29 +109,97 @@ html{
 }
 
 .portfolio-home{
-    min-height: 70vh;
+    height: 40vh;
 }
 
 .home-content{
     max-width: min(800  px, 90%);
 }
 
-.home-content h1{
-    font-size: 25px;
-    padding: 0 0 15%;
-    color: var(--secondary-color);
-}
-
-.home-content h1{
+.home-content h1, .portfolio-home-content h1{
     padding-bottom: 5px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.4;
+    font-weight: 700;
     color: var(--secondary-color);
-    border-right: 3px solid;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation:
-        typing 2s steps(44),
-        cursor .4s step-end infinite alternate;
+}
+
+.wave-text {
+    background: linear-gradient(
+        90deg,
+    #6ee7b7,
+    #3b82f6,
+    #9333ea,
+    #6ee7b7
+    );
+    background-size: 300% 100%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: wave 4s linear infinite;
+}
+
+.outline-text{
+    background: linear-gradient(
+        90deg,
+    #6ee7b7,
+    #3b82f6,
+    #9333ea,
+    #6ee7b7
+    );
+    background-size: 300% 100%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-stroke: 3px transparent;
+
+    animation: wave 4s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-bottom: 3px  solid #000;
+    border-right: 3px solid #000;
+    transform: rotate(45deg);
+    animation: bounce 1.5s infinite;
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    50% {
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    100% {
+        transform: rotate(45deg) translate(0px, 0px);
+    }
 }
 
 @keyframes cursor {
@@ -132,18 +208,6 @@ html{
 
 @keyframes typing {
     from { width: 0}
-}
-
-.portfolio-home-content h1{
-    padding-bottom: 5px;
-    color: var(--secondary-color);
-    border-right: 3px solid;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation:
-        typing 1.5s steps(12),
-        cursor .4s step-end infinite alternate;
 }
 
 .btn-box{
@@ -183,9 +247,16 @@ html{
     box-shadow: 0 0 25px var(--main-color);
 }
 
+.img-box {
+    display: flex;
+    min-width: 25%;
+    max-width: 30%;
+}
+
 .img-box img{
     border-radius: 50%;
-    width: 20vw;
+    min-width: 20vh;
+    max-width: 100%;
 }
 
 .job-icon img{
@@ -212,6 +283,12 @@ html{
     padding: 12% 8%;
     gap: 10em;
     background: var(--secondary-color);
+}
+
+.about a {
+    color: var(--third-color);
+    text-decoration: underline;
+    text-decoration-color: #ffffff60;
 }
 
 .portfolio{
@@ -309,16 +386,30 @@ html{
     font-size: 20px;
 }
 
+.experience-content .experience-content {
+    width: 100%;
+}
+
 .about-img img{
     position: relative;
     width: 550px;
     border-radius: 50%;
 }
 
+.about-content {
+    line-height: 2.5em;
+}
+
+.about-content h1 {
+    color: var(--third-color);
+
+}
+
 .about-content h2{
     text-align: left;
     color: var(--third-color);
-    font-size: 32px;
+    font-size: 2rem;
+    opacity: 0.8;
 }
 
 .about-content h3{
@@ -470,7 +561,7 @@ html{
         font-size: 20px;
     }
 
-    .home-content h1{
+    .home-content h1, .experience h1{
         font-size: 10px;
         padding: 0 0 5%;
         color: var(--secondary-color);
